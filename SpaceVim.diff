@@ -1,0 +1,12 @@
+diff --git a/autoload/SpaceVim/layers/tags.vim b/autoload/SpaceVim/layers/tags.vim
+index 29ca1a9c..39f989e7 100644
+--- a/autoload/SpaceVim/layers/tags.vim
++++ b/autoload/SpaceVim/layers/tags.vim
+@@ -28,6 +28,7 @@ function! SpaceVim#layers#tags#config() abort
+     call SpaceVim#mapping#space#def('nnoremap', ['m', 'g', 'r'], 'Unite gtags/ref', 'find references', 1)
+   else
+     call SpaceVim#mapping#space#def('nnoremap', ['m', 'g', 'f'], 'Gtags -p', 'list all file in GTAGS', 1)
++    call SpaceVim#mapping#space#def('nnoremap', ['m', 'g', 'l'], 'Gtags -f %', 'list function name in cureent file', 1)
+     call SpaceVim#mapping#space#def('nnoremap', ['m', 'g', 'd'], 'exe "Gtags -d " . expand("<cword>")', 'find definitions', 1)
+     call SpaceVim#mapping#space#def('nnoremap', ['m', 'g', 'r'], 'exe "Gtags -r " . expand("<cword>")', 'find references', 1)
+   endif
